@@ -1,0 +1,468 @@
+.w {
+    width: 960px;
+    margin: 0 auto;
+}
+.wd(@w:960px) {
+    width: @w;
+}
+.h(@h:34px) {
+    height: @h;
+}
+.f(@f:left) {
+    float: @f;
+}
+.p(@p:ralative) {
+    position: @p;
+}
+//top
+.mod_topbar {
+    .wd(100%);
+    .h;
+    color: #666666;
+    font-size: 11px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #c7c7c7;
+    .top{
+        .w;
+        .h;
+        ul:first-child {
+            .f;
+            li:first-child {
+                .f;
+                .h;
+                line-height: 34px;
+                padding: 0 0 0 6px;
+                background: url("../img/line.jpg") no-repeat right center;
+                color: #118855;
+                a{
+                    padding: 0 12px;
+                }
+            }
+            li:last-child {
+                .f;
+                .h;
+                line-height: 34px;
+                padding: 0 0 0 15px;              
+            }
+        }
+        ul:last-child {
+            .f(right);
+            li {
+                .f;
+                .h;
+                position: relative;
+                line-height: 34px;
+                padding: 0 10px;
+                background: url("../img/line.jpg") no-repeat right center;
+                
+                span{
+                    .wd(16px);
+                    .h(5px);
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: url("../img/sanjiao.jpg") no-repeat right center;
+                }
+                .mydiv{
+                    .wd(81px);
+                    .h(80px);
+                    padding: 6px 0 0 10px;
+                    position: absolute;
+                    top: -1px;
+                    left:-1px;
+                    background: white;
+                    border: 1px solid #c7c7c7;
+                    display: none;
+                    p{
+                        .h(22px);
+                        line-height: 22px;
+                    }
+                }
+            }
+            li:hover .mydiv{
+                    display: block;
+            }
+            li:hover span{
+                    background: url("../img/daosanjiao.jpg") no-repeat right center;
+            }
+            li:last-child{
+                .h;
+                line-height: 34px;
+                a{
+                    color:#ff0000;
+                }
+                padding: 0 0 0 13px;
+                background: none;
+            }
+        }
+    }
+}
+//header
+.mod_header {
+    .wd(100%);
+    border-bottom: 2px solid #4bac20;
+    .con {
+        .w;
+        .h(100px);
+        background: url(../img/paybj.png) no-repeat right bottom;
+        padding: 0.1px;
+        h1 {
+            .f;
+            .wd(219px);
+            .h(57px);
+            margin: 20px 0 0 2px;
+            font-size: 0;
+            background: url("../img/logo2.jpg") no-repeat left center;
+        } 
+        img{
+            .f;
+            margin: 36px 0 0 118px;
+        }    
+    }
+}
+.mod_payprocess{
+    .w;
+    .h(54px);
+    margin: 10px auto 0;
+    ul{
+        li{
+            .f;
+            .wd(240px);
+            text-align: center;
+            .h(24px);
+            line-height: 24px;
+        }
+        li:first-child{
+            color:#ff9000;
+        }
+    }
+}
+//main
+.mod_main{
+    .w;
+    margin: 12px auto 0;
+    h3{
+        .h(42px);
+        line-height: 42px;
+    }
+    .content{
+        .h(430px);
+        border: 1px solid #d9dcda;
+        border-radius: 3px;
+        .cont_head{
+            ul{              
+                li:first-child{
+                    .f;
+                    .h(40px);
+                    .wd(312px);
+                    text-indent: 34px;
+                    line-height: 40px;
+                    border-bottom: 4px solid #bbeeae;
+                    margin: 0 4px 0 0;
+                    b{
+                        .wd(16px);
+                        .h(16px);
+                        display: inline-block;
+                        background: url(../img/duihua.jpg);
+                        vertical-align: middle;
+                        margin: 0 0 0 14px;
+                    }
+                   
+                }
+                li:nth-child(2){
+                    .f;
+                    .h(40px);
+                    .wd(122px);
+                    text-indent: 36px;
+                    line-height: 40px;
+                    border-bottom: 4px solid #bbeeae;
+                    margin: 0 4px 0 0;
+                   
+                }
+                li:nth-child(3){
+                    .f;
+                    .h(40px);
+                    .wd(120px);
+                    text-indent: 46px;
+                    line-height: 40px;
+                    border-bottom: 4px solid #bbeeae;
+                    margin: 0 4px 0 0;
+                   
+                }
+                li:nth-child(4){
+                    .f;
+                    .h(40px);
+                    .wd(262px);
+                    text-indent: 106px;
+                    line-height: 40px;
+                    border-bottom: 4px solid #bbeeae;
+                    margin: 0 4px 0 0;                   
+                }
+                li:last-child{
+                    .f;
+                    .h(40px);
+                    .wd(126px);
+                    text-indent: 40px;
+                    line-height: 40px;
+                    border-bottom: 4px solid #bbeeae;                   
+                }
+            }
+        }
+        .material{
+            .h(94px);
+            font-size: 11px;
+            border-bottom:1px dashed #e4e4e4 ;
+            figure{
+                .f;
+                .wd(312px);
+                margin: 0 4px 0 0;
+            img{
+                .wd(70px);
+                .h(70px);
+                .f;
+                border: 1px solid #dedee0;
+                margin: 10px 10px 0 10px;
+            }
+            p{
+                font-size: 13px;
+                .h(40px);
+                line-height: 40px;
+                span:first-child{
+                    .wd(16px);
+                    .h(16px);
+                    display: inline-block;
+                    margin: 0 6px 0 0;
+                    background: url(../img/tui.jpg);
+                }
+                span:last-child{
+                    .wd(16px);
+                    .h(16px);
+                    display: inline-block;
+                    background: url(../img/anquanbaohu.png) no-repeat -47px -110px;
+                }
+            }
+            }
+            .price{
+                .f;
+                margin: 0 4px 0 0;
+                .wd(122px);
+                .h(94px);
+                text-align: center;
+                padding: 28px 0 0 0;
+                p{
+                    .h(20px);
+                    line-height: 20px;                  
+                span{
+                    text-decoration: line-through;
+                }               
+                }
+            }
+            .num{
+                .f;
+                margin: 0 4px 0 0;
+                .wd(120px);
+                text-align: center;
+                button{
+                    .wd(20px);
+                    .h(20px);
+                    border-radius: 3px;
+                    outline: none;
+                    border: 1px solid #cccccc;
+                    margin: 35px 0 0 0;
+                }
+                input[type="text"]{
+                    .wd(50px);
+                    .h(25px);
+                    text-align: center;
+                    border-radius: 3px;
+                    outline: none;
+                    margin: 40px 5px 0;
+                    border: 1px solid #cccccc;
+                }
+            }
+            .serveway{
+                .f;
+                margin: 0 4px 0 0;
+                .wd(262px);
+                text-align: center;
+                select{
+                        font-size: 11px;
+                    .wd(120px);
+                    .h(20px);
+                    text-align: center;
+                    border:1px solid #a9a9a9;
+                    outline: none;
+                    margin: 25px 0 8px 0;
+                }
+                a{
+                    color:#0099ff;
+                }
+            }
+            .money{
+                .f;
+                .wd(126px);
+                text-align: center;
+                p{
+                    .h(28px);
+                    line-height: 24px;
+                    margin: 20px 0 0 0;
+                    color:#ff6600;  
+                    font-weight: bold;
+                    font-size: 16px;                 
+                }
+                button{
+                    .wd(120px);
+                    .h(20px);
+                    color:#ff6600;
+                    background:#fff5e1;
+                    border:1px solid #ffe5b9;
+                    font-size: 11px;
+                }
+            }
+        }
+        .paymoney{
+            background:#f9f9f9;
+            table{
+                tr{
+                    .pay_1{
+                            vertical-align: top;
+                            font-size: 11px;
+                            color:#666666;
+                            text-align: right;
+                            .p1{
+                                span{
+                                    color: #ff0000;
+                                }
+                                .h(48px);
+                                line-height: 48px;
+                            }  
+                            .p2{
+                                span{
+                                    color: #ff0000;
+                                }
+                                .h(48px);
+                                line-height: 48px;
+                            }                    
+                    }
+                    .pay_2{
+                           vertical-align: top;
+                           input[type="text"]{
+                               .wd(412px);
+                               .h(32px);
+                               outline: none;
+                               border: 1px solid #cccccc;
+                               margin: 8px 0 12px 0;
+                           }
+                           .onlinepay{
+                               .wd(212px);
+                               .h(64px);
+                               .f;
+                               background: url(../img/jiaoluo.jpg) no-repeat right bottom;                               
+                               border: 2px solid #2faf14;
+                               margin: 0 22px 0 0;
+                               padding: 3px 0 0 8px;
+                               h4{
+                                   .h(24px);
+                                   line-height: 24px;
+                                   margin: 0 0 8px 0;                                 
+                                   b{
+                                       .wd(25px);
+                                       .h(27px);
+                                       display: inline-block;                                     
+                                       background: url(../img/baohu.png);
+                                       margin: 0 8px 0 16px;
+                                       vertical-align: middle;
+                                   }
+                                   span{
+                                       color:#2faf14;
+                                       font-weight: normal;
+                                   }
+                               }
+                           }
+                           .onfacepay{
+                               .wd(212px);
+                               .h(64px);
+                               .f;
+                               text-align: center;
+                               font-weight: bold;
+                               padding: 23px 0 0 0;
+                               font-size: 13px;
+                               border: 1px solid #cecece;
+                           }
+                           ul{
+                               .h(54px);
+                               line-height: 54px;
+                               margin: 0 0 12px 0;
+                               li{
+                                   .f;
+                                   padding: 0 25px 0 0;
+                               }
+                           }
+                           .button{
+                               button{
+                                   .wd(166px);
+                                   .h(44px);
+                                   font-size: 20px;
+                                   font-weight: bold;
+                                   color: white;
+                                   background:#ff8500;
+                                   outline: none;
+                                   border: none;
+                                   border-radius: 5px;
+                                   margin: 0 16px 0 0;
+                               }
+                               a{
+                                   text-decoration: underline;
+                                   color:#ff0000;
+                               }
+                           }
+                    }
+                }
+            }
+        }
+    }
+}
+//footer
+.mod_footer{
+    .wd(100%);
+    .h(290px);
+    background:#f9f9f9;
+    .footer_1{
+        .w;
+        .h(155px);
+        border-bottom:1px solid #eeeeee ;
+        .footer_box{
+        .wd(960px);
+        margin: 0 auto;
+        div{
+            .wd(192px);
+            .h(155px); 
+            .f;
+            padding: 0.1px;          
+        h4{
+           font-size: 14px;
+           .wd(192px);
+           .h(44px);
+           line-height: 42px;
+            text-indent: 70px;
+            margin: 20px 0 0 0;
+            background:url(../img/beijingtuxiang.gif) no-repeat 20px 0px;       
+        }
+        p{
+            .h(26px);
+            line-height: 26px;
+            .wd(192px);
+            text-align: center;
+        }
+        }
+    }
+    }
+    .address{
+        .w;
+        text-align: center;
+        padding: 20px 0 0 0;
+        p{
+            .h(26px);
+            line-height: 26px;
+        }
+    }
+}

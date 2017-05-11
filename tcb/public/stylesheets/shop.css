@@ -1,0 +1,642 @@
+.w {
+  width: 960px;
+  margin: 0 auto;
+}
+.mod_topbar {
+  width: 100%;
+  height: 34px;
+  color: #666666;
+  font-size: 11px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #c7c7c7;
+}
+.mod_topbar .top {
+  width: 960px;
+  margin: 0 auto;
+  height: 34px;
+}
+.mod_topbar .top ul:first-child {
+  float: left;
+}
+.mod_topbar .top ul:first-child li:first-child {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 6px;
+  background: url("../images/line.jpg") no-repeat right center;
+  color: #118855;
+}
+.mod_topbar .top ul:first-child li:first-child a {
+  padding: 0 12px;
+}
+.mod_topbar .top ul:first-child li:last-child {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 15px;
+}
+.mod_topbar .top ul:last-child {
+  float: right;
+}
+.mod_topbar .top ul:last-child li {
+  float: left;
+  height: 34px;
+  position: relative;
+  line-height: 34px;
+  padding: 0 10px;
+  background: url("../images/line.jpg") no-repeat right center;
+}
+.mod_topbar .top ul:last-child li span {
+  width: 16px;
+  height: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/sanjiao.jpg") no-repeat right center;
+}
+.mod_topbar .top ul:last-child li .mydiv {
+  width: 81px;
+  height: 80px;
+  padding: 6px 0 0 10px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background: white;
+  border: 1px solid #c7c7c7;
+  display: none;
+}
+.mod_topbar .top ul:last-child li .mydiv p {
+  height: 22px;
+  line-height: 22px;
+}
+.mod_topbar .top ul:last-child li:hover .mydiv {
+  display: block;
+}
+.mod_topbar .top ul:last-child li:hover span {
+  background: url("../images/daosanjiao.jpg") no-repeat right center;
+}
+.mod_topbar .top ul:last-child li:last-child {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 13px;
+  background: none;
+}
+.mod_topbar .top ul:last-child li:last-child a {
+  color: #ff0000;
+}
+.mod_header {
+  width: 100%;
+  border-bottom: 2px solid #4bac20;
+}
+.mod_header .con {
+  width: 960px;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0.1px;
+}
+.mod_header .con h1 {
+  float: left;
+  width: 219px;
+  height: 57px;
+  margin: 20px 0 0 2px;
+  font-size: 0;
+  background: url("../images/logo2.jpg") no-repeat left center;
+}
+.mod_header .con ul {
+  float: left;
+  width: 80px;
+  height: 46px;
+  margin: 30px 0 0 16px;
+}
+.mod_header .con ul li:first-child {
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  color: #999999;
+  text-indent: 16px;
+}
+.mod_header .con ul li:last-child {
+  font-size: 12px;
+  height: 24px;
+  line-height: 20px;
+  color: #2e74d3;
+  text-indent: 16px;
+}
+.mod_header .con .search {
+  float: left;
+  width: 580px;
+  height: 100px;
+  margin: 0 0 0 25px;
+}
+.mod_header .con .search ol {
+  margin: 20px 0 0;
+}
+.mod_header .con .search ol li {
+  float: left;
+  padding: 0 10px;
+  height: 20px;
+  margin: 0 5px;
+  font-size: 11px;
+  line-height: 20px;
+  color: #333333;
+}
+.mod_header .con .search ol li:first-child {
+  background: #4bac20;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+.mod_header .con .search input[type="text"] {
+  float: left;
+  outline: none;
+  margin: 10px 0 0 5px;
+  width: 490px;
+  height: 35px;
+  text-indent: 5px;
+  border: 2px solid #4bac20;
+  background: url("../images/lvsj.jpg") no-repeat 467px center;
+}
+.mod_header .con .search button {
+  width: 75px;
+  height: 35px;
+  float: left;
+  outline: none;
+  margin: 10px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: #4bac20;
+  border: none;
+}
+.mod_banner {
+  width: 960px;
+  margin: 0 auto;
+  height: 165px;
+  background: url(../images/shop_bannerbj.jpg);
+  border: 1px solid #e9f0f5;
+  margin: 10px auto;
+}
+.mod_banner img {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d8d8d8;
+  float: left;
+  margin: 24px 28px 0 21px;
+}
+.mod_banner .banner_1 {
+  float: left;
+  font-weight: bold;
+}
+.mod_banner .banner_1 h3 {
+  height: 40px;
+  width: 318px;
+  line-height: 40px;
+  font-size: 16px;
+  color: black;
+  margin: 12px 0 0 0;
+  background: url(../images/duihua.jpg) no-repeat 177px 14px;
+}
+.mod_banner .banner_1 h3 span {
+  width: 55px;
+  height: 18px;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+  background: url(../images/360rz.jpg);
+}
+.mod_banner .banner_1 p {
+  height: 28px;
+  line-height: 28px;
+  font-size: 11px;
+  color: #000000;
+}
+.mod_banner .banner_1 p span {
+  color: #e24e4c;
+}
+.mod_banner .banner_1 p a {
+  color: #2e74d3;
+}
+.mod_banner .banner_1 ul {
+  width: 318px;
+  height: 28px;
+  line-height: 28px;
+}
+.mod_banner .banner_1 ul li {
+  float: left;
+  margin: 0 15px 0 0;
+  height: 28px;
+  line-height: 28px;
+}
+.mod_banner .banner_1 ul li:first-child span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  float: left;
+  background: url(../images/bao.jpg);
+  margin: 4px 4px 0 0;
+}
+.mod_banner .banner_1 ul li:nth-child(2) span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: url(../images/tui.jpg);
+  float: left;
+  margin: 4px 4px 0 0;
+}
+.mod_banner .banner_1 ul li:last-child span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: url(../images/peifu.jpg);
+  float: left;
+  margin: 4px 4px 0 0;
+}
+.mod_banner .banner_2 {
+  float: right;
+  font-weight: bold;
+  margin: 18px 20px 0 0;
+}
+.mod_banner .banner_2 ul {
+  width: 218px;
+  height: 28px;
+  line-height: 28px;
+}
+.mod_banner .banner_2 ul li {
+  float: left;
+  margin: 0 0 0 12px;
+}
+.mod_banner .banner_2 ul li:first-child span {
+  width: 25px;
+  height: 25px;
+  float: left;
+  background: url(../images/fenxiang.jpg);
+}
+.mod_banner .banner_2 ul li:nth-child(2) span {
+  width: 25px;
+  height: 25px;
+  float: left;
+  background: url(../images/fazhi.jpg);
+}
+.mod_banner .banner_2 ul li:last-child span {
+  width: 25px;
+  height: 25px;
+  float: left;
+  background: url(../images/jubao.jpg);
+}
+.mod_banner .banner_2 p {
+  height: 28px;
+  line-height: 28px;
+  text-align: right;
+  font-size: 11px;
+}
+.mod_banner .banner_2 p span {
+  color: #009900;
+}
+.mod_annou {
+  width: 960px;
+  margin: 0 auto;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #f0f0f0;
+}
+.mod_annou h3 {
+  text-indent: 47px;
+  color: #000000;
+  float: left;
+  margin: 0 15px 0 0;
+  background: url(../images/gonggao.jpg) no-repeat 21px center;
+}
+.mod_annou span {
+  font-weight: bold;
+  color: #ff0000;
+}
+.mod_main {
+  width: 960px;
+  margin: 0 auto;
+  height: 100px;
+  margin: 15px auto 0;
+}
+.mod_main .list {
+  width: 760px;
+  float: left;
+}
+.mod_main .list .list_top {
+  height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 1px 0 #f2f2f2,0 2px 0 #fbfbfb;
+}
+.mod_main .list .list_top ul li {
+  float: left;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px ;
+  margin: 0 15px;
+}
+.mod_main .list .list_top ul li:first-child {
+  color: #128422;
+  border-bottom: 4px solid #2ece02;
+}
+.mod_main .list .list_top ul li:hover {
+  color: #128422;
+  border-bottom: 4px solid #2ece02;
+}
+.mod_main .list .list_top input[type="search"] {
+  width: 163px;
+  height: 22px;
+  float: left;
+  font-size: 11px;
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: 5px 0 0 5px;
+  margin: 8px 0 0 10px;
+}
+.mod_main .list .list_top button {
+  width: 48px;
+  height: 22px;
+  float: left;
+  border: 1px solid #cccccc;
+  border-left: none ;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  margin: 8px 0 0 0;
+}
+.mod_main .list .list_head {
+  height: 40px;
+  line-height: 40px;
+  background: #f8fff3;
+  margin: 8px 0 0 0;
+  border: 1px solid #ceddc5;
+}
+.mod_main .list .list_head ul li {
+  float: left;
+  padding: 0 11px;
+  color: #2e74d3;
+}
+.mod_main .list .list_head ul li span {
+  color: #888888;
+}
+.mod_main .list .list_head ul li:first-child {
+  color: #000000;
+  font-weight: bold;
+}
+.mod_main .list .list_content .content ul li {
+  height: 95px;
+  border-bottom: 1px solid #e8e6df;
+  padding: 0.1px;
+}
+.mod_main .list .list_content .content ul li figure {
+  width: 520px;
+  height: 95px;
+  float: left;
+}
+.mod_main .list .list_content .content ul li figure img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #dedee0;
+  float: left;
+  margin: 13px 15px 0 10px;
+}
+.mod_main .list .list_content .content ul li figure p:nth-child(2) {
+  font-size: 12px;
+  height: 24px;
+  color: #2e74d3;
+  line-height: 24px;
+  margin: 10px 0 0 0;
+}
+.mod_main .list .list_content .content ul li figure p:last-child {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+}
+.mod_main .list .list_content .content ul li .p {
+  float: left;
+  margin: 40px 0 0 15px;
+}
+.mod_main .list .list_content .content ul li button {
+  float: left;
+  width: 95px;
+  height: 30px;
+  margin: 32px 0 0 65px;
+  background: #ffa720;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  color: white ;
+  border-radius: 5px;
+}
+.mod_main .list .list_content .content ul li:hover {
+  background: #fcf8e9;
+}
+.mod_main .list .list_content .buttom ul {
+  width: 186px;
+  height: 48px;
+  color: #2e74d3;
+  margin: 5px auto;
+}
+.mod_main .list .list_content .buttom ul li {
+  float: left;
+  padding: 6px 10px;
+  border: 1px solid #d5d7c0;
+  margin: 0 4px 0 0;
+  border-radius: 3px;
+}
+.mod_main .list .list_content .buttom ul li:hover {
+  border: 1px solid white;
+}
+.mod_main .list .list_content .buttom ul li:last-child {
+  margin: 0;
+}
+.mod_main .list .usersay {
+  border: 1px solid #dfdfe1;
+}
+.mod_main .list .usersay h3 {
+  height: 35px;
+  background: #f7f7f7;
+  line-height: 35px;
+}
+.mod_main .list .usersay .user ul li {
+  height: 108px;
+  border-bottom: 1px dashed #ebebeb;
+}
+.mod_main .list .usersay .user ul li figure {
+  float: left;
+  width: 95px;
+  text-align: center;
+  font-size: 9px;
+  margin: 0 10px;
+}
+.mod_main .list .usersay .user ul li figure img {
+  margin: 14px 0 11px 0;
+}
+.mod_main .list .usersay .user ul li .user_1 {
+  float: left;
+}
+.mod_main .list .usersay .user ul li .user_1 p {
+  height: 24px;
+  line-height: 24px;
+  font-size: 11px;
+}
+.mod_main .list .usersay .user ul li .user_1 p:first-child {
+  margin: 6px 0 0 0;
+}
+.mod_main .list .usersay .user ul li .user_1 p:first-child span {
+  width: 80px;
+  height: 13px;
+  display: inline-block;
+  background: url(../images/user_bj.png) no-repeat -112px -40px;
+}
+.mod_main .list .usersay .user ul li .user_1 p:nth-child(2) {
+  color: #000000;
+}
+.mod_main .list .usersay .user ul li .p {
+  float: right;
+  margin: 10px 5px 0 0;
+}
+.mod_main .list .usersay .user ul li:last-child {
+  border: none;
+}
+.mod_main .list .usersay .userbuttom ul {
+  width: 220px;
+  height: 48px;
+  color: #2e74d3;
+  margin: 5px auto;
+}
+.mod_main .list .usersay .userbuttom ul li {
+  float: left;
+  padding: 6px 10px;
+  border: 1px solid #d5d7c0;
+  margin: 0 4px 0 0;
+  border-radius: 3px;
+}
+.mod_main .list .usersay .userbuttom ul li:hover {
+  background: #2e74d3;
+  color: white;
+}
+.mod_main .list .usersay .userbuttom ul li:last-child {
+  margin: 0;
+}
+.mod_main .list .usersay .userbuttom ul li:first-child {
+  border: 1px solid white;
+  color: #000000;
+}
+.mod_main .list .description {
+  margin: 10px 0 0 0;
+  border: 1px solid #dfdfe1;
+  height: 206px;
+}
+.mod_main .list .description h3 {
+  height: 35px;
+  background: #f7f7f7;
+  line-height: 35px;
+  border-bottom: 1px solid #dfdfe1;
+}
+.mod_main .list .description ul {
+  width: 760px;
+  height: 40px;
+  margin: 0 0 4px 0;
+}
+.mod_main .list .description ul li {
+  width: 660px;
+  float: left;
+  padding: 10px;
+}
+.mod_main .list .description ul li a {
+  color: #2e74d3;
+}
+.mod_main .list .description ul li span {
+  color: #ff0000;
+}
+.mod_main .list .description ul li button {
+  outline: none;
+  border: 1px solid #badd98;
+  padding: 4px 10px;
+  margin: -5px 10px 0 0;
+  color: #337d39;
+}
+.mod_main .list .description ul li:first-child {
+  width: 100px;
+  padding: 10px;
+  text-align: right;
+  background: #ededed;
+  vertical-align: middle;
+}
+.mod_main .list .serve {
+  margin: 10px 0 0 0;
+  border: 1px solid #dfdfe1;
+}
+.mod_main .list .serve h3 {
+  height: 35px;
+  background: #f7f7f7;
+  line-height: 35px;
+  text-indent: 16px;
+  border-bottom: 1px solid #dfdfe1;
+}
+.mod_main .section {
+  float: right;
+  width: 180px;
+  height: 390px;
+  text-align: center;
+}
+.mod_main .section h3 {
+  height: 45px;
+  width: 180px;
+  line-height: 45px;
+  text-align: center;
+}
+.mod_main .section .img {
+  width: 125px;
+  height: 125px;
+}
+.mod_main .section #container {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid #cdcdcd;
+  margin: 0 0 8px 0;
+}3
+.mod_main .section a {
+  color: #2e74d3;
+}
+.mod_footer {
+  width: 960px;
+  margin: 0 auto;
+  height: 290px;
+}
+.mod_footer .footer_1 {
+  height: 155px;
+  border-bottom: 1px solid #eeeeee ;
+}
+.mod_footer .footer_1 .footer_box {
+  width: 960px;
+  margin: 0 auto;
+}
+.mod_footer .footer_1 .footer_box div {
+  width: 192px;
+  height: 155px;
+  float: left;
+  padding: 0.1px;
+}
+.mod_footer .footer_1 .footer_box div h4 {
+  font-size: 14px;
+  width: 192px;
+  height: 44px;
+  line-height: 42px;
+  text-indent: 70px;
+  margin: 20px 0 0 0;
+  background: url(../images/beijingtuxiang.gif) no-repeat 20px 0px;
+}
+.mod_footer .footer_1 .footer_box div p {
+  height: 26px;
+  line-height: 26px;
+  width: 192px;
+  text-align: center;
+}
+.mod_footer .address {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.mod_footer .address p {
+  height: 26px;
+  line-height: 26px;
+}

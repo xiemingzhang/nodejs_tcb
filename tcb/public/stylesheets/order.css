@@ -1,0 +1,442 @@
+.w {
+  width: 960px;
+  margin: 0 auto;
+}
+.mod_topbar {
+  width: 100%;
+  height: 34px;
+  color: #666666;
+  font-size: 11px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #c7c7c7;
+}
+.mod_topbar .top {
+  width: 960px;
+  margin: 0 auto;
+  height: 34px;
+}
+.mod_topbar .top ul:first-child {
+  float: left;
+}
+.mod_topbar .top ul:first-child li:first-child {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 6px;
+  background: url("../images/line.jpg") no-repeat right center;
+  color: #118855;
+}
+.mod_topbar .top ul:first-child li:first-child a {
+  padding: 0 12px;
+}
+.mod_topbar .top ul:first-child li:last-child {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 15px;
+}
+.mod_topbar .top ul:last-child {
+  float: right;
+}
+.mod_topbar .top ul:last-child li {
+  float: left;
+  height: 34px;
+  position: relative;
+  line-height: 34px;
+  padding: 0 10px;
+  background: url("../images/line.jpg") no-repeat right center;
+}
+.mod_topbar .top ul:last-child li span {
+  width: 16px;
+  height: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/sanjiao.jpg") no-repeat right center;
+}
+.mod_topbar .top ul:last-child li .mydiv {
+  width: 81px;
+  height: 80px;
+  padding: 6px 0 0 10px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background: white;
+  border: 1px solid #c7c7c7;
+  display: none;
+}
+.mod_topbar .top ul:last-child li .mydiv p {
+  height: 22px;
+  line-height: 22px;
+}
+.mod_topbar .top ul:last-child li:hover .mydiv {
+  display: block;
+}
+.mod_topbar .top ul:last-child li:hover span {
+  background: url("../images/daosanjiao.jpg") no-repeat right center;
+}
+.mod_topbar .top ul:last-child li:last-child {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 0 0 13px;
+  background: none;
+}
+.mod_topbar .top ul:last-child li:last-child a {
+  color: #ff0000;
+}
+.mod_header {
+  width: 100%;
+  border-bottom: 2px solid #4bac20;
+}
+.mod_header .con {
+  width: 960px;
+  margin: 0 auto;
+  height: 100px;
+  background: url(../images/paybj.png) no-repeat right bottom;
+  padding: 0.1px;
+}
+.mod_header .con h1 {
+  float: left;
+  width: 219px;
+  height: 57px;
+  margin: 20px 0 0 2px;
+  font-size: 0;
+  background: url("../images/logo2.jpg") no-repeat left center;
+}
+.mod_header .con img {
+  float: left;
+  margin: 36px 0 0 118px;
+}
+.mod_payprocess {
+  width: 960px;
+  margin: 0 auto;
+  height: 54px;
+  margin: 10px auto 0;
+}
+.mod_payprocess ul li {
+  float: left;
+  width: 240px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+}
+.mod_payprocess ul li:first-child {
+  color: #ff9000;
+}
+.mod_main {
+  width: 960px;
+  margin: 0 auto;
+  margin: 12px auto 0;
+}
+.mod_main h3 {
+  height: 42px;
+  line-height: 42px;
+}
+.mod_main .content {
+  height: 430px;
+  border: 1px solid #d9dcda;
+  border-radius: 3px;
+}
+.mod_main .content .cont_head ul li:first-child {
+  float: left;
+  height: 40px;
+  width: 312px;
+  text-indent: 34px;
+  line-height: 40px;
+  border-bottom: 4px solid #bbeeae;
+  margin: 0 4px 0 0;
+}
+.mod_main .content .cont_head ul li:first-child b {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(../images/duihua.jpg);
+  vertical-align: middle;
+  margin: 0 0 0 14px;
+}
+.mod_main .content .cont_head ul li:nth-child(2) {
+  float: left;
+  height: 40px;
+  width: 122px;
+  text-indent: 36px;
+  line-height: 40px;
+  border-bottom: 4px solid #bbeeae;
+  margin: 0 4px 0 0;
+}
+.mod_main .content .cont_head ul li:nth-child(3) {
+  float: left;
+  height: 40px;
+  width: 120px;
+  text-indent: 46px;
+  line-height: 40px;
+  border-bottom: 4px solid #bbeeae;
+  margin: 0 4px 0 0;
+}
+.mod_main .content .cont_head ul li:nth-child(4) {
+  float: left;
+  height: 40px;
+  width: 262px;
+  text-indent: 106px;
+  line-height: 40px;
+  border-bottom: 4px solid #bbeeae;
+  margin: 0 4px 0 0;
+}
+.mod_main .content .cont_head ul li:last-child {
+  float: left;
+  height: 40px;
+  width: 126px;
+  text-indent: 40px;
+  line-height: 40px;
+  border-bottom: 4px solid #bbeeae;
+}
+.mod_main .content .material {
+  height: 94px;
+  font-size: 11px;
+  border-bottom: 1px dashed #e4e4e4 ;
+}
+.mod_main .content .material figure {
+  float: left;
+  width: 312px;
+  margin: 0 4px 0 0;
+}
+.mod_main .content .material figure img {
+  width: 70px;
+  height: 70px;
+  float: left;
+  border: 1px solid #dedee0;
+  margin: 10px 10px 0 10px;
+}
+.mod_main .content .material figure p {
+  font-size: 13px;
+  height: 40px;
+  line-height: 40px;
+}
+.mod_main .content .material figure p span:first-child {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 0 6px 0 0;
+  background: url(../images/tui.jpg);
+}
+.mod_main .content .material figure p span:last-child {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(../images/anquanbaohu.png) no-repeat -47px -110px;
+}
+.mod_main .content .material .price {
+  float: left;
+  margin: 0 4px 0 0;
+  width: 122px;
+  height: 94px;
+  text-align: center;
+  padding: 28px 0 0 0;
+}
+.mod_main .content .material .price p {
+  height: 20px;
+  line-height: 20px;
+}
+.mod_main .content .material .price p span {
+  text-decoration: line-through;
+}
+.mod_main .content .material .num {
+  float: left;
+  margin: 0 4px 0 0;
+  width: 120px;
+  text-align: center;
+}
+.mod_main .content .material .num button {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #cccccc;
+  margin: 35px 0 0 0;
+}
+.mod_main .content .material .num input[type="text"] {
+  width: 50px;
+  height: 25px;
+  text-align: center;
+  border-radius: 3px;
+  outline: none;
+  margin: 40px 5px 0;
+  border: 1px solid #cccccc;
+}
+.mod_main .content .material .serveway {
+  float: left;
+  margin: 0 4px 0 0;
+  width: 262px;
+  text-align: center;
+}
+.mod_main .content .material .serveway select {
+  font-size: 11px;
+  width: 120px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #a9a9a9;
+  outline: none;
+  margin: 25px 0 8px 0;
+}
+.mod_main .content .material .serveway a {
+  color: #0099ff;
+}
+.mod_main .content .material .money {
+  float: left;
+  width: 126px;
+  text-align: center;
+}
+.mod_main .content .material .money p {
+  height: 28px;
+  line-height: 24px;
+  margin: 20px 0 0 0;
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 16px;
+}
+.mod_main .content .material .money button {
+  width: 120px;
+  height: 20px;
+  color: #ff6600;
+  background: #fff5e1;
+  border: 1px solid #ffe5b9;
+  font-size: 11px;
+}
+.mod_main .content .paymoney {
+  background: #f9f9f9;
+}
+.mod_main .content .paymoney table tr .pay_1 {
+  vertical-align: top;
+  font-size: 11px;
+  color: #666666;
+  text-align: right;
+}
+.mod_main .content .paymoney table tr .pay_1 .p1 {
+  height: 48px;
+  line-height: 48px;
+}
+.mod_main .content .paymoney table tr .pay_1 .p1 span {
+  color: #ff0000;
+}
+.mod_main .content .paymoney table tr .pay_1 .p2 {
+  height: 48px;
+  line-height: 48px;
+}
+.mod_main .content .paymoney table tr .pay_1 .p2 span {
+  color: #ff0000;
+}
+.mod_main .content .paymoney table tr .pay_2 {
+  vertical-align: top;
+}
+.mod_main .content .paymoney table tr .pay_2 input[type="text"] {
+  width: 412px;
+  height: 32px;
+  outline: none;
+  border: 1px solid #cccccc;
+  margin: 8px 0 12px 0;
+}
+.mod_main .content .paymoney table tr .pay_2 .onlinepay {
+  width: 212px;
+  height: 64px;
+  float: left;
+  background: url(../images/jiaoluo.jpg) no-repeat right bottom;
+  border: 2px solid #2faf14;
+  margin: 0 22px 0 0;
+  padding: 3px 0 0 8px;
+}
+.mod_main .content .paymoney table tr .pay_2 .onlinepay h4 {
+  height: 24px;
+  line-height: 24px;
+  margin: 0 0 8px 0;
+}
+.mod_main .content .paymoney table tr .pay_2 .onlinepay h4 b {
+  width: 25px;
+  height: 27px;
+  display: inline-block;
+  background: url(../images/baohu.png);
+  margin: 0 8px 0 16px;
+  vertical-align: middle;
+}
+.mod_main .content .paymoney table tr .pay_2 .onlinepay h4 span {
+  color: #2faf14;
+  font-weight: normal;
+}
+.mod_main .content .paymoney table tr .pay_2 .onfacepay {
+  width: 212px;
+  height: 64px;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  padding: 23px 0 0 0;
+  font-size: 13px;
+  border: 1px solid #cecece;
+}
+.mod_main .content .paymoney table tr .pay_2 ul {
+  height: 54px;
+  line-height: 54px;
+  margin: 0 0 12px 0;
+}
+.mod_main .content .paymoney table tr .pay_2 ul li {
+  float: left;
+  padding: 0 25px 0 0;
+}
+.mod_main .content .paymoney table tr .pay_2 .button button {
+  width: 166px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: #ff8500;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin: 0 16px 0 0;
+}
+.mod_main .content .paymoney table tr .pay_2 .button a {
+  text-decoration: underline;
+  color: #ff0000;
+}
+.mod_footer {
+  width: 100%;
+  height: 290px;
+  background: #f9f9f9;
+}
+.mod_footer .footer_1 {
+  width: 960px;
+  margin: 0 auto;
+  height: 155px;
+  border-bottom: 1px solid #eeeeee ;
+}
+.mod_footer .footer_1 .footer_box {
+  width: 960px;
+  margin: 0 auto;
+}
+.mod_footer .footer_1 .footer_box div {
+  width: 192px;
+  height: 155px;
+  float: left;
+  padding: 0.1px;
+}
+.mod_footer .footer_1 .footer_box div h4 {
+  font-size: 14px;
+  width: 192px;
+  height: 44px;
+  line-height: 42px;
+  text-indent: 70px;
+  margin: 20px 0 0 0;
+  background: url(../images/beijingtuxiang.gif) no-repeat 20px 0px;
+}
+.mod_footer .footer_1 .footer_box div p {
+  height: 26px;
+  line-height: 26px;
+  width: 192px;
+  text-align: center;
+}
+.mod_footer .address {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.mod_footer .address p {
+  height: 26px;
+  line-height: 26px;
+}

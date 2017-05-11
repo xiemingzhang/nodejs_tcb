@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>360同城帮支付</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/order.css"/>
+		<script type="text/javascript" src="/javascripts/jquery-3.1.0.js" ></script>
+		<script type="text/javascript" src="/javascripts/order.js"></script>
+	</head>
+	<body>
+		<div class="mod_topbar">
+			<div class="top">
+				<ul>
+					<li>北京<a href="">[切换城市]</a></li>
+					<li><a href="http://localhost:3000/home">同城帮首页</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li>客服电话:4000-399-360</li>
+					<li>客户服务<span></span>
+						<div class="mydiv">
+							<p>客户服务<span></span></p>
+							<p><a href="#">帮助中心</a></p>
+							<p><a href="#">维修付款</a></p>
+						</div>
+					</li>
+					<li><a href="#">论坛</a></li>
+					<li><a href="#">投诉建议</a></li>
+				</ul>
+			</div>
+		</div>
+		<header class="mod_header">
+			<div class="con">
+			<h1><a href="http://baidu.com">360同城帮</a></h1>
+			<img src="/images/anquanjiaoyi.png"/>
+			</div>
+		</header>
+		<div class="clearfix"></div>
+		<div class="mod_payprocess">
+			<img src="/images/fukuanbuz.png" alt="" />
+			<ul>
+				<li>告别胡乱加价</li>
+				<li>360担保</li>
+				<li>支持上门服务</li>
+				<li>支持退款</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+		<div class="mod_main">
+			<h3>确认订单信息</h3>
+			<div class="content">
+				<div class="cont_head">
+					<ul>
+						<li>店铺  : <span>顺通电脑维修</span>  卖家  :  <span>顺通电脑维修</span><b></b></li>
+						<li>单价(元)</li>
+						<li>数量</li>
+						<li>服务方式</li>
+						<li>合计(元)</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				<div class="material">
+					<figure>
+						<img src="/images/ganghuamo.jpg"/>
+						<p>苹果手机iPhone贴钢化膜</p>
+						<p><span></span><span></span></p>
+					</figure>
+					<div class="price">
+						<p>优惠价   :  30.00</p>
+						<p>门店价   :  <span>50.00</span></p>
+					</div>
+					<div class="num">
+						<button id="button1">-</button><input type="text" value="1"/><button id="button2">+</button>
+					</div>
+					<div class="serveway">
+						<select name="">
+							<option value="0">到店维修</option>
+							<option value="0">远程维修</option>
+						</select>
+						<p>店址:果园环岛葛布店北里10号楼底商<a href="#">[地图]</a></p>
+					</div>
+					<div class="money">
+						<p>30.00</p>
+						<button>在线支付专享</button>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="paymoney">
+					<table>
+						<tr height="98">
+							<td width="160" class="pay_1"><p class="p1"><span>*</span>您的手机号码  : </p></td>
+							<td width="800" class="pay_2">
+								<input type="text" placeholder="请填写11位手机号码" />
+								<p>购买成功后您将收到服务激活码短信，凭此练习商家进行消费</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="pay_1"><p class="p2"><span>*</span>支付方式   : </p></td>
+							<td class="pay_2">
+								<div class="onlinepay">
+									<h4>在线支付到360 <b></b><span>360推荐</span></h4>
+									<p>360担保，7天内无效可申请退款</p>
+								</div>
+								<div class="onfacepay">
+									免费登记，当面付款
+								</div>
+								<div class="clearfix"></div>									
+								<ul>
+									<li><input type="radio" name="payway" id="zhifubao" value="" checked/><label for="zhifubao">支付宝</label></li>
+									<li><input type="radio" name="payway" id="wangying" value=""/><label for="wangying">网银支付</label></li>
+									<li><input type="radio" name="payway" id="yinlian" value=""/><label for="yinlian">银联快捷支付</label></li>
+									<li><input type="radio" name="payway" id="shouji" value=""/><label for="shouji">手机支付宝</label></li>
+									<li><input type="radio" name="payway" id="weixin" value=""/><label for="weixin">微信支付</label></li>
+								</ul>
+								<div class="button">
+								<button id="mybutton">提交订单</button>
+								<a href="#">360同城帮声明:“修不好，全额退款！”</a>
+								</div>								
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="mod_footer">			
+			<div class="footer_1">
+				<div class="footer_box">				
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				</div>
+			</div>
+			<div class="address">
+				<p>客服电话  :  400-399-360   投诉建议   网站地图</p>
+				<p>Copyright©  2005-2016  360.CN  ALL Rights Reserved  360安全中心</p>
+				<p>京ICP备08010314号-19 京公网安备110000000006</p>
+			</div>
+		</div>
+</body>
+</html>

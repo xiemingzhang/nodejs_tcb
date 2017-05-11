@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>360同城帮首页</title>
+		<meta name="Keywords" content="手机维修|电脑维修"/>
+		<meta name="Description" content="最安全的手机/电脑维修网站"/>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/index.css"/>
+		<script type="text/javascript" src="/javascripts/jquery-3.1.0.js"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=13d3c320f0267af8e549edd2ee5d6e85"></script>
+		<script src="/javascripts/jquery-2.1.1.js"></script>
+    	<script src="/javascripts/jquery.autocomplete.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var ul = document.getElementById('myUl');
+				var lis = document.getElementsByClassName('myLi');
+				var sliderImgS = document.getElementById('sliderImg');
+				var sliderBox = document.getElementById('sliderBox');				
+				
+				var index = 0;
+				lis[0].style.background = "#333333"				
+				function begin(){
+					
+					for(var i=0;i<lis.length;i++){
+						lis[i].style.background = "#b0938e"
+					}
+
+					var sliders = document.getElementsByClassName('slide');
+					
+					index++;
+					if(index > sliders.length-1){
+						index = 0;
+					}
+					sliderImgS.style.left = index*1200*-1 + 'px'
+					lis[index].style.background = "#333333"
+					}
+							
+				timer = setInterval(begin,5000);
+				
+								
+				for(var j=0;j<lis.length;j++){
+					
+				(function(num){
+				lis[num].onmouseover = function(){
+					index = num
+				sliderImgS.style.left = num*1200*-1+'px';
+				for(var i=0;i<5;i++){
+					lis[i].style.background = "#b2958f"
+				}
+				lis[num].style.background = "#333333"
+				clearInterval(timer);		
+				}
+				lis[num].onmouseout = function(){
+					index = num
+				sliderImgS.style.left = num*1200*-1+'px';
+				timer = setInterval(begin,5000)	
+				}
+				})(j)				
+				}
+
+				var $return = $('.mod_return')
+				$(window).scroll(function(){
+					if($(window).scrollTop()>10)
+					{
+						$return.css('display','block')
+					}else{
+						$return.css('display','none')
+					}
+				})
+				
+				$return.click(function(){
+					$(window).scrollTop(0)
+				})
+
+				function bindEvent(){
+					var lis = $('.paging li')
+					// console.log(lis)
+						$('.paging li').click(function(e){
+							if($(this).index() == 0 || $(this).index()==11){
+								var num = $('.current').index()
+								if($(this).index()==11){
+									if(num !=10){									
+									$('.current').removeClass('current')
+									$(lis[num+1]).addClass('current')
+									getData(num+1)
+									$('.before').css('display','block')
+								}
+								/*$('.current').next('li').addClass('current')*/
+								}
+								if($(this).index() == 0){
+									if(num > 2){
+									$('.current').removeClass('current')
+									$(lis[num-1]).addClass('current')
+									getData(num-1)
+									}else if(num == 2){
+									$('.current').removeClass('current')
+									$(lis[num-1]).addClass('current')
+									getData(num-1)
+									$('.before').css('display','none')
+									}
+								}
+								
+							}else{
+								if($(this).index() !=1) {
+									// alert('ok')
+									$('.before').css('display','block')
+								}else{
+									$('.before').css('display','none')
+								}
+							$('.paging li').removeClass('current');
+							$(this).addClass('current');
+							getData($(this).index());	
+							}				
+						})
+					}
+				bindEvent();
+
+				function render(obj){
+					
+					var tpl = '<li>\
+					<img src="'+obj.shop_ico+'"/>\
+					<div class="content_1">\
+						<h4>'+obj.shop_name+'<span>店铺等级:</span>'+obj.level+'</h4>\
+						<p>'+obj.main+'</p>\
+						<p>'+obj.addr+'</p>\
+					</div>\
+					<div class="content_2">\
+						<p><span></span>先行赔付</p>\
+						<p><span></span>同城帮认证</p>\
+						<p>人气:'+obj.count+'次浏览</p>\
+					</div>\
+					<button>进入店铺</button>\
+					</li>';
+
+					return tpl;
+				}	
+
+				function getData(pn){
+					pn = pn || 1;
+					if(pn > 3) pn=3;
+					$.get('/home/shoplist/'+pn,function(res){
+						if(typeof res === "string"){
+							res = JSON.parse(res);
+						}
+						var html = [];
+						for (var i = 0,len = res.shop_data.length ; i < len; i++) {
+							html.push(render(res.shop_data[i]))
+						};
+						$('#list').html(html.join(""))						
+					})
+				}
+
+				getData();
+
+				function render2(obj){
+					
+					var tpl = '<li>\
+						<figure>\
+						<img src="'+obj.shop_ico+'"/>\
+						<h4>'+obj.shop_name+'</h4>\
+						<p>'+obj.comments+'条评论</p>\
+						</figure>\
+					</li>';
+
+					return tpl;
+				}
+
+				function getData2(){
+					$.get('/home/shoplist/1',function(res){
+						if(typeof res === "string"){
+							res = JSON.parse(res);
+						}
+						var html1 = [];
+						for (var i = 0,len = res.shop_data.length ; i < len; i++) {
+							html1.push(render2(res.shop_data[i]))
+						};
+						// $('#list').html(html.join(""))						
+					
+						var temp;
+						for(var i=0;i<html1.length;i++)
+						{
+							//console.log(res.shop_data[i].grade)
+							for(j=0;j<html1.length-i-1;j++)
+							{
+								 if(res.shop_data[j].grade < res.shop_data[j+1].grade){
+								 temp=html1[j];
+								 html1[j]=html1[j+1];
+								 html1[j+1]=temp;
+								}
+							}
+						}
+						// var html2 = html1.reverse()
+						$('#list2').html(html1.join(""))
+						})
+					}
+
+					getData2();
+					//1.添加地图面板
+
+						var map = new AMap.Map('mybox');
+					//2.设定地图的中心点和级别
+						map.setZoom(10);
+						map.setCenter([116.50,40]);
+
+						
+
+					function addDot(n,m,a,b){	
+						//3.点标记的创建
+						 var marker = new AMap.Marker({
+						 position: [n,m],
+						 map:map
+	    				});
+
+						//4.如何打开信息窗体
+						var clickHandle = AMap.event.addListener(marker, 'click', function() {
+						//5.高级信息窗体的创建与设定
+						AMap.plugin('AMap.AdvancedInfoWindow',function(){ var infowindow = new AMap.AdvancedInfoWindow({ content: '<h3 class="title">'+a+'</h1>'+ '<div class="content">'+b+'</div>', offset: new AMap.Pixel(0, -30), asOrigin:false }); infowindow.open(map,new AMap.LngLat(n, m)); })
+						})
+												
+
+						//6.添加工具条和比例尺
+						AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){ var toolBar = new AMap.ToolBar(); var scale = new AMap.Scale(); map.addControl(toolBar); map.addControl(scale); })
+
+						}
+
+
+
+
+					$('#myditu').click(function(){
+						$("#mybox").css('display','block');
+						$("#myh4").css('display','block');
+
+						$.get('/home/shoplist/1',function(res){
+						if(typeof res === "string"){
+							var res = JSON.parse(res).shop_data;
+						}
+
+						var arr1=[];
+						var arr2=[];
+						var arr3=[];
+						var arr4=[];
+						 
+						for(var i = 0 ; i<res.length;i++){
+							arr1.push(res[i].map_longitude)
+							arr2.push(res[i].map_latitude)
+							arr3.push(res[i].shop_name)
+							arr4.push(res[i].addr)
+						}
+						for(var i = 0; i<res.length;i++){
+							addDot(arr1[i],arr2[i],arr3[i],arr4[i])
+						}
+						})
+					
+					})
+
+					$('#myspan').click(function(){
+						$('#mybox').css('display',"none")
+						$('#myh4').css('display',"none")
+					})
+
+					 var countries=[];
+					 function getName(pn){
+					     pn=pn||1;
+					     if(pn>4){
+					         pn=4;
+					     }
+					     $.get('/home/shoplist/'+pn,function(res){
+					         if(typeof res==="string"){
+					             res = JSON.parse(res);
+					         }
+					        // var html = [];
+
+					         for(var i =0,len=res.shop_data.length;i<len;i++){
+					            
+					             var names=res.shop_data[i].shop_name;
+					             var namess={
+					                 'value':names
+					             };
+					            countries.push(namess);
+
+					         }
+
+					        console.log(countries);
+					       return   countries;
+					     });
+
+
+					 }
+					getName();
+
+					
+
+				    $('#autocomplete').autocomplete({
+				        lookup: countries,
+				        onSelect: function (suggestion) {
+				            alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+				        }
+    				});
+			})
+		</script>
+	</head>
+	<body>
+	    <div class="mod_return"></div>
+		<div class="mod_onlinecons">
+			<button></button>
+		</div>
+		<div class='mod_container'>
+		<div class="mod_topbar">
+			<div class="top">
+				<ul>
+					<li>北京<a href="">[切换城市]</a></li>
+					<li><a href="#">同城帮首页</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li>客服电话:4000-399-360</li>
+					<li>客户服务<span></span>
+						<div class="mydiv">
+							<p>客户服务<span></span></p>
+							<p><a href="#">帮助中心</a></p>
+							<p><a href="#">维修付款</a></p>
+						</div>
+					</li>
+					<li><a href="#">论坛</a></li>
+					<li><a href="#">投诉建议</a></li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="mod_menu">
+			<div class="menu">
+			<h1>
+				<a href="http://localhost:3000/home">同城帮</a>
+			</h1>
+			<ul>
+				<li>二手良品<img src="../images/hot.jpg" alt="" /></li>
+				<li>手机回收</li>
+				<li>手机维修</li>
+				<li><a href="http://localhost:3033/repair">电脑维修</a></li>
+				<li>以旧换新</li>
+				<li>手机试用</li>
+			</ul>
+		</div>
+		</div>
+		<div class="mod_banner">				
+					<div class="banner">
+					<div class="ban_nav">
+					<ul>
+						<li>修手机/Pad
+							<div class="nav">
+								
+							</div>	
+						</li>
+						<li>修电脑
+							<div class="nav">
+								
+							</div>
+						</li>
+						<li>卖手机
+							<div class="nav">
+								
+							</div>
+						</li>
+						<li>买二手手机
+							<div class="nav">
+								
+							</div>
+						</li>
+					</ul>
+					</div>
+					<div class="slider" id="sliderBox">
+						<div id="sliderImg">
+						<img src="../images/1.jpg" alt="" 							class="slide"/>
+						<img src="../images/2.jpg" alt="" 
+							class="slide"/>
+						<img src="../images/3.jpg" alt="" 
+							class="slide"/>
+						<img src="../images/4.jpg" alt="" 
+							class="slide"/>
+						<img src="../images/5.jpg" alt="" 
+							class="slide"/>
+						</div>	
+						<ul id="myUl">
+							<li class="myLi" style="background: #333333;"></li>
+							<li class="myLi"></li>
+							<li class="myLi"></li>
+							<li class="myLi"></li>
+							<li class="myLi"></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+					<div class="hot">
+						<img src="../images/huanpin.jpg" alt="" />
+						<img src="../images/huandianchi.jpg" alt="" />
+						<img src="../images/huanxin.jpg"/>
+						<img src="../images/shengji.jpg"/>
+					</div>
+				</div>	
+			</div>
+		<div class="mod_content">
+			
+			<div class="recover clearfix">
+				<div class="h3 clearfix">
+				<h3>热门手机回收</h3>
+				<a href="#">查看更多<span>></span></a>
+				</div>
+				<div>
+					<div class="img">
+						<img src="../images/recover.jpg"/>
+					</div>										
+				 	<figure>
+				 		<img src="../images/iphone6.jpg"/>
+				 		<p>苹果iphone6</p>
+				 	</figure>
+				 	<figure>
+				 		<img src="../images/iphone6.jpg"/>
+				 		<p>苹果iphone6</p>
+				 	</figure>
+				 	<figure>
+				 		<img src="../images/iphone6.jpg"/>
+				 		<p>苹果iphone6</p>
+				 	</figure>
+				 	<figure>
+				 		<img src="../images/iphone6.jpg"/>
+				 		<p>苹果iphone6</p>
+				 	</figure>
+				 	<figure>
+				 		<img src="../images/iphone6.jpg"/>
+				 		<p>苹果iphone6</p>
+				 	</figure>
+				</div>				
+			</div>
+			<div class="clearfix"></div>
+			<div class="goods">
+				<div class="h3 clearfix">
+					<h3>二手良品精选</h3>
+					<a href="#">查看更多<span>></span></a>
+				</div>
+				
+				<div class="img">
+					<img src="../images/jingping.jpg" alt="" />
+				</div>
+				<figure>
+					<img src="../images/meizhu.jpg"/>
+					<p>魅族 metal</p>
+					<p>￥599.00</p>
+				</figure>
+				<figure>
+					<img src="../images/meizhu.jpg"/>
+					<p>魅族 metal</p>
+					<p>￥599.00</p>
+				</figure>
+				<figure>
+					<img src="../images/meizhu.jpg"/>
+					<p>魅族 metal</p>
+					<p>￥599.00</p>
+				</figure>
+				<figure>
+					<img src="../images/meizhu.jpg"/>
+					<p>魅族 metal</p>
+					<p>￥599.00</p>
+				</figure>
+				<figure>
+					<img src="../images/meizhu.jpg"/>
+					<p>魅族 metal</p>
+					<p>￥599.00</p>
+				</figure>
+			</div>	
+			<div class="clearfix"></div>
+			<div class="shop">
+				<div class="h3 clearfix">
+					到店维修
+				</div>
+				<div class="position">
+					<select name="">
+						<option value="">请选择</option>
+					</select>
+					<select name="">
+						<option value="">请选择</option>
+					</select>
+					<input type="search" name="country" id="autocomplete" results="s" />
+					<button>搜索</button>
+				</div>
+				<div class="list">
+					<div class="list_head">
+				<ul>
+					<li><span></span>默认排序</li>
+					<li><span></span>按成交量</li>
+					<li><span></span>按人气</li>
+					<li>
+						<input type="checkbox" name="" id="beforepay" value=""/><label for="beforepay">先行赔付</label>
+						<button id="myditu">地图模式</button>
+							<h4 id="myh4"><span id="myspan">X</span>地图模式</h4>
+							<div id="mybox"></div>						
+					</li>
+				</ul>
+			</div>
+			<div class="list_content">
+				<ul id="list">
+					
+				</ul>	
+				
+				<ol class="paging">
+					<li class="before">《上一页</li>
+					<li class="current">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>	
+					<li class="after">下一页》</li>					
+				</ol>
+			</div>
+			</div>
+			<div class="rank">
+				<h3>商家好评榜</h3>
+				<ul id="list2">
+					
+				</ul>
+			</div>
+			</div>				
+		</div>
+		<div class="clearfix">			
+		</div>
+		<div class="mod_footer">			
+			<div class="footer_1">
+				<div class="footer_box">
+					
+				
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p>购物流程</p>
+					<p>用户注册</p>
+					<p>帮助文档</p>
+				</div>
+				</div>
+			</div>
+			<div class="address">
+				<p>客服电话  :  400-399-360   投诉建议   网站地图</p>
+				<p>Copyright©  2005-2016  360.CN  ALL Rights Reserved  360安全中心</p>
+				<p>京ICP备08010314号-19 京公网安备110000000006</p>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
