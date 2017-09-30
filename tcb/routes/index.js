@@ -3,6 +3,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { className: '1609' });
+  res.render('index', { className: 'xxx' });
 });
 module.exports = router;
